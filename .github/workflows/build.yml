@@ -27,3 +27,5 @@ jobs:
           with:
             name: TestCI
             path: X/bin/Release/net6.0-windows/publish/**
+
+        #dsafdfsdsdf
