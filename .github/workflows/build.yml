@@ -26,4 +26,4 @@ jobs:
           uses: actions/upload-artifact@v2
           with:
             name: TestCI
-            path: X\bin\Release\net6.0-windows\X.dll
+            path: X/bin/Release/net6.0-windows/publish/**
