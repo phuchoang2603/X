@@ -20,7 +20,7 @@ jobs:
           run: dotnet restore 
 
         - name: Publish
-          run: dotnet publish 
+          run: dotnet publish -c:Release
 
         - name: Publish
           uses: actions/upload-artifact@v2
