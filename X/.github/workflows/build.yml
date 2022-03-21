@@ -1,0 +1,30 @@
+ame: 'Build application '
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: Build app
+    runs-on: windows-latest
+    steps:
+        # Checkout the code
+        - uses: actions/checkout@v2
+
+        - uses: actions/setup-dotnet@v1
+          with:
+            dotnet-version: '6.0.x'
+
+        - name: Restore
+          run: dotnet restore 
+
+        - name: Publish
+          run: dotnet publish 
+
+        - name: Publish
+          uses: actions/upload-artifact@v2
+          with:
+            name: TestCI
+            path: X\bin\Release\net6.0-windows\X.dll
+
